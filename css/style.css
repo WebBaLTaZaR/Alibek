@@ -199,16 +199,46 @@ body {
   gap: 10px;
   padding: 20px;
   border: 1px solid #000;
-  background-color: #BCDFFB;
+  background-color: #bcdffb;
   border-radius: 10px;
 }
 
 .catalogProducts a {
+  display: inline-block;
   border: 1px solid #000;
   background-color: #fff;
   font-size: 15px;
   border-radius: 10px;
   padding: 10px;
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: visibility 1s, opacity 0.5s linear, max-height 1s ease-out;
+  transition: visibility 1s, opacity 0.5s linear, max-height 1s ease-out;
+  flex-direction: column;
+}
+
+.productList li > a {
+  padding: 5px;
+}
+
+li:hover > .productList {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px;
+  -webkit-transition-delay: 0.2s, 0.2s, 0.2s;
+          transition-delay: 0.2s, 0.2s, 0.2s;
 }
 
 .catalogMontage {
@@ -224,7 +254,7 @@ body {
   gap: 10px;
   padding: 20px;
   border: 1px solid #000;
-  background-color: #BCDFFB;
+  background-color: #bcdffb;
   border-radius: 10px;
 }
 
