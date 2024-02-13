@@ -19,7 +19,7 @@
   background-color: #bcdffb;
   border-radius: 10px;
 }
-.catalogProducts a {
+.catalogProducts > li a {
   display: inline-block;
   border: 1px solid #000;
   background-color: #fff;
@@ -30,7 +30,6 @@
 .productList {
   display: flex;
   flex-direction: column;
-
   visibility: hidden;
   opacity: 0;
   max-height: 0;
@@ -41,13 +40,23 @@
     padding: 5px;
   }
 }
-
-li:hover > .productList {
+.catalogProducts > li:hover > a {
+  background-color: gray;
+  color: white;
+  transition-delay: 0.2s, 0.2s, 0.2s;
+}
+.productList > li:hover > a {
+  background-color: gray;
+  color: white;
+  transition-delay: 0.1s, 0.1s, 0.1s;
+}
+.catalogProducts > li:hover > .productList {
   visibility: visible;
   opacity: 1;
   max-height: 500px;
   transition-delay: 0.2s, 0.2s, 0.2s;
 }
+
 .catalogMontage {
   font-size: 24px;
   font-weight: 700;
@@ -60,11 +69,17 @@ li:hover > .productList {
   border-radius: 10px;
 }
 .catalogMontage a {
+  display: inline-block;
   border: 1px solid #000;
   background-color: #fff;
   font-size: 15px;
   border-radius: 10px;
   padding: 10px;
+}
+.catalogMontage > li:hover > a {
+  background-color: gray;
+  color: white;
+  transition-delay: 0.2s, 0.2s, 0.2s;
 }
 .startMassage {
   margin-left: 30px;
